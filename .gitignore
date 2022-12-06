@@ -70,3 +70,11 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Playmaker is a paid asset. Can't include in repo. Must ignore
+/Assets/PlayMaker/*
+/Assets/Plugins/Playmaker/*
+/Assets/Gizmos/Play*
+/Assets/Gizmos/Fsm*
+/Assets/PlayMaker*
+/Assets/Plugins/PlayMaker*
