@@ -1,0 +1,123 @@
+body { padding: 0; margin: 0 }
+#unity-container { position: absolute }
+#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-mobile { width: 100%; height: 100% }
+#unity-canvas {  background: #513073; width:100vw !important; height:100vh !important;  background: url('view.gif') no-repeat center; background-size: cover; display:block; margin-left: auto; margin-right: auto;  }
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-loading-bar { position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); display: none }
+#unity-logo { width: 362.8px; height: 89.6px; background: url('logo.png') no-repeat center; background-size:contain; }
+#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: auto; margin-right: auto; background: url('progress-bar-empty-dark.png') no-repeat center }
+.player {
+	position:absolute;
+	top:40px;
+	color:White;
+	right:20px;
+	font-family:"Poppins", sans-serif;
+	font-size:13px;
+	text-align:center;
+}
+audio {max-width:210px;height:30px;}
+audio::-webkit-media-controls-enclosure{background:#513073;opacity:0.8;}
+
+  audio::-webkit-media-controls-current-time-display {color:white; text-shadow:0;}
+audio::-webkit-media-controls-volume-slider-container {background:#81C31D;}
+audio::-webkit-media-controls-time-remaining-display  {display:none;}
+audio::-webkit-media-controls-timeline,video::-webkit-media-controls-timeline {}
+
+}
+
+/*Flashy button*/
+ @keyframes glowing {
+        0% {
+          background: #81C31D;
+          box-shadow: 0 0 5px #2ba805;
+        }
+        50% {
+          background-color: #81C31D;
+          box-shadow: 0 0 20px #49e819;
+        }
+        100% {
+          background-color: #81C31D;
+          box-shadow: 0 0 5px #2ba805;
+        }
+      }
+	  
+	.but {
+        animation: glowing 1300ms infinite;
+		width:10px; 
+		height:11px; 
+		background:#81C31D;
+		border-radius:50%;
+		display:inline-block;
+		margin:5px 0px 0px 0px;
+		border:0;
+		line-height:0;
+		margin-right:5px;
+		
+	
+      }  
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.ticker-wrap {
+  position: absolute;
+ top: 0;
+  width: 0;
+  overflow: hidden;
+  height: 30px;
+  background-color: #513073; opacity:0.8;
+  padding-left: 100%;
+  box-sizing: content-box;
+}
+.ticker-wrap .ticker {
+  display: inline-block;
+  height:30px;
+  line-height: 2;
+  white-space: nowrap;
+  padding-right: 50%;
+  box-sizing: content-box;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 120s;
+  animation-duration: 120s;
+}
+.ticker-wrap .ticker__item {
+  display: inline-block;
+  padding: 0 50px;
+  font-size: 12px;
+  color: white;
+  font-family:"Poppins", sans-serif;
+}
+
+#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
+
+
+#unity-footer { position: relative; display:none; }
+.unity-mobile #unity-footer { display: none }
+#unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); display: none !important; }
