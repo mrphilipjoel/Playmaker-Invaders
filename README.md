@@ -9,3 +9,10 @@ I finally decided, starting a project, putting it on Github, and letting ANYONE 
 
 I tried thinking of the most simple game idea, that would be easy for others to understand and build upon.
 The game that came to mind was "Space Invaders".
+
+--------------
+Play the Game
+--------------
+
+You can play the latest build at the following URL:
+https://mrphilipjoel.github.io/Playmaker-Invaders/Build/index.html
