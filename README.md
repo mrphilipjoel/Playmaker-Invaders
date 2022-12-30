@@ -10,6 +10,8 @@ I finally decided, starting a project, putting it on Github, and letting ANYONE 
 I tried thinking of the most simple game idea, that would be easy for others to understand and build upon.
 The game that came to mind was "Space Invaders".
 
+https://youtu.be/DXPvv-8Mzqo
+
 --------------
 Play the Game
 --------------
