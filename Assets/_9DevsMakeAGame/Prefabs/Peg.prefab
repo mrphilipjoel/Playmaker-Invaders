@@ -210,7 +210,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 50
+        x: 66
         y: 100
         width: 100
         height: 16
@@ -262,7 +262,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 227
+        x: 243
         y: 99
         width: 100
         height: 16
