@@ -148,14 +148,16 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.GetPosition2d
         - HutongGames.PlayMaker.Actions.FloatCompare
         - HutongGames.PlayMaker.Actions.Collision2dEvent
+        - HutongGames.PlayMaker.Actions.Collision2dEvent
         customNames:
         - 
         - 
         - Collision2D Event
-        actionEnabled: 010101
-        actionIsOpen: 000101
-        actionStartIndex: 00000000060000000d000000
-        actionHashCodes: 68fde3041bcdca040ef11c05
+        - Collision2D Event
+        actionEnabled: 01010101
+        actionIsOpen: 00010101
+        actionStartIndex: 00000000060000000d00000014000000
+        actionHashCodes: 68fde3041bcdca040ef11c050ef11c05
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -164,7 +166,21 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
+        - useVariable: 1
+          name: goCollider
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -194,6 +210,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: EnemySaucer
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -235,8 +257,20 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -259,12 +293,13 @@ MonoBehaviour:
         - 
         - leftScreen
         - collided
-        byteData: 00000000010100000000
+        - collided
+        byteData: 0000000001010000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000250000000f0000000f00000007000000010000000f0000000f0000000f000000170000001700000017000000010000001400000007000000110000001200000017000000130000000f000000
+        paramDataType: 14000000250000000f0000000f00000007000000010000000f0000000f0000000f000000170000001700000017000000010000001400000007000000110000001200000017000000130000000f0000001400000007000000110000001200000017000000130000000f000000
         paramName:
         - gameObject
         - vector_2d
@@ -286,8 +321,15 @@ MonoBehaviour:
         - sendEvent
         - storeCollider
         - storeForce
-        paramDataPos: 0000000000000000000000000100000000000000040000000200000003000000040000000000000001000000020000000500000001000000060000000000000000000000030000000000000005000000
-        paramByteDataSize: 0000000000000000000000000000000004000000010000000000000000000000000000000000000000000000000000000100000000000000040000000000000000000000000000000000000000000000
+        - gameObject
+        - collision
+        - ignoreDisabled
+        - collideTag
+        - sendEvent
+        - storeCollider
+        - storeForce
+        paramDataPos: 0000000000000000000000000100000000000000040000000200000003000000040000000000000001000000020000000500000001000000060000000000000000000000030000000000000005000000020000000a0000000100000001000000040000000100000006000000
+        paramByteDataSize: 000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000010000000000000004000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000
     - name: Reset Bullet
       description: 
       colorIndex: 0
@@ -477,7 +519,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 0101010101
-        actionIsOpen: 0101000101
+        actionIsOpen: 0000000001
         actionStartIndex: 0000000001000000070000000e00000012000000
         actionHashCodes: 8d4bb50368fde3040cf26a00f8c566018d1e8803
         unityObjectParams: []
@@ -652,15 +694,37 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetVelocity2d
+        - HutongGames.PlayMaker.Actions.RandomFloat
+        - HutongGames.PlayMaker.Actions.SetAudioPitch
+        - HutongGames.PlayMaker.Actions.AudioPlay
         customNames:
         - Set Velocity 2d
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 68fde304
+        - 
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000006000000090000000c000000
+        actionHashCodes: 68fde3042ee0170432d5940281294e04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -676,7 +740,14 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams: []
-        fsmObjectParams: []
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.AudioClip
+          value: {fileID: 8300000, guid: 82f55799ac2004aad8376219d28b74fc, type: 3}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
@@ -693,8 +764,44 @@ MonoBehaviour:
           showInInspector: 1
           networkSync: 0
           value: 8
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.7
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1.3
+        - useVariable: 1
+          name: BulletPitch
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: BulletPitch
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmVector2Params:
         - useVariable: 1
           name: 
@@ -706,13 +813,14 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 0000000000
+        stringParams:
+        - 
+        byteData: 000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000250000000f0000000f0000000700000001000000
+        paramDataType: 14000000250000000f0000000f00000007000000010000000f0000000f0000000f000000140000000f00000001000000140000000f000000180000001100000017000000
         paramName:
         - gameObject
         - vector
@@ -720,8 +828,19 @@ MonoBehaviour:
         - y
         - space
         - everyFrame
-        paramDataPos: 000000000000000000000000010000000000000004000000
-        paramByteDataSize: 000000000000000000000000000000000400000001000000
+        - min
+        - max
+        - storeResult
+        - gameObject
+        - pitch
+        - everyFrame
+        - gameObject
+        - volume
+        - oneShotClip
+        - WaitForEndOfClip
+        - finishedEvent
+        paramDataPos: 0000000000000000000000000100000000000000040000000200000003000000040000000100000005000000050000000200000006000000000000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000004000000010000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -758,6 +877,12 @@ MonoBehaviour:
         value: 8
       - useVariable: 1
         name: fBulletYPosition
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: BulletPitch
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -808,7 +933,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
