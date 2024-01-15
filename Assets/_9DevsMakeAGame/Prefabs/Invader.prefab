@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &9082273078738014724
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,7 +105,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1138805875164076931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +341,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -376,7 +377,7 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!1 &4402655567207764798
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,7 +663,6 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.AnimatorCrossFade
         - HutongGames.PlayMaker.Actions.SetBoolValue
         - HutongGames.PlayMaker.Actions.WakeUp2d
-        - HutongGames.PlayMaker.Actions.SetGravity2dScale
         - HutongGames.PlayMaker.Actions.SetCollider2dIsTrigger
         - HutongGames.PlayMaker.Actions.SetVisibility
         - HutongGames.PlayMaker.Actions.SetGravity2dScale
@@ -673,11 +673,10 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        actionEnabled: 01010101010101
-        actionIsOpen: 00000000000000
-        actionStartIndex: 000000000500000008000000090000000b0000000e00000012000000
-        actionHashCodes: 6d52840427fbe1038d4bb503e8ea39028d1e8803f8c56601e8ea3902
+        actionEnabled: 010101010101
+        actionIsOpen: 000000000001
+        actionStartIndex: 000000000500000008000000090000000c00000010000000
+        actionHashCodes: 6d52840427fbe1038d4bb5038d1e8803f8c56601e8ea3902
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -697,14 +696,6 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 3351253059276789550}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -759,18 +750,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: _fGravityScale
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
+          value: 0.3
         fsmIntParams:
         - useVariable: 1
           name: 
@@ -820,7 +805,7 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000000f000000100000000f00000011000000110000000100000014000000140000000f00000014000000110000000100000014000000110000001100000001000000140000000f000000
+        paramDataType: 14000000120000000f000000100000000f0000001100000011000000010000001400000014000000110000000100000014000000110000001100000001000000140000000f000000
         paramName:
         - gameObject
         - stateName
@@ -832,8 +817,6 @@ MonoBehaviour:
         - everyFrame
         - gameObject
         - gameObject
-        - gravityScale
-        - gameObject
         - isTrigger
         - setAllColliders
         - gameObject
@@ -842,8 +825,8 @@ MonoBehaviour:
         - resetOnExit
         - gameObject
         - gravityScale
-        paramDataPos: 0000000000000000000000000000000001000000000000000100000000000000010000000200000002000000030000000200000001000000040000000300000004000000020000000500000003000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000000000000000000000000000010000000000000000000000
+        paramDataPos: 000000000000000000000000000000000100000000000000010000000000000001000000020000000200000001000000030000000300000004000000020000000400000002000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000
     - name: Hit
       description: 
       colorIndex: 0
@@ -886,7 +869,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 0101010101010101
-        actionIsOpen: 0000000000000000
+        actionIsOpen: 0000010000000000
         actionStartIndex: 0000000005000000090000000d00000010000000120000001500000017000000
         actionHashCodes: 81294e045e69bb045e69bb0427fbe1039bd6f8018d1e8803e8ea39028d4bb503
         unityObjectParams: []
@@ -1079,7 +1062,7 @@ MonoBehaviour:
         stringParams:
         - 
         - ADD SCORE
-        - ShakeMedium
+        - ShakeSmall
         byteData: 00000000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -1403,7 +1386,13 @@ MonoBehaviour:
       linkTarget: 0
       colorIndex: 0
     variables:
-      floatVariables: []
+      floatVariables:
+      - useVariable: 1
+        name: _fGravityScale
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: 0.3
       intVariables: []
       boolVariables:
       - useVariable: 1
@@ -1438,7 +1427,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
