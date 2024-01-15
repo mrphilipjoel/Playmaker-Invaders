@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_9DevsMakeAGame/Scenes/Jerry.unity
-    guid: 20460999ee3214f9bae62f05f4837ab2
+    path: Assets/_9DevsMakeAGame/Scenes/Philip_take2.unity
+    guid: 3ccb92fc8d2702749bffa407a83ea56a
   m_configObjects: {}
